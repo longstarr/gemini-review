@@ -1,0 +1,14 @@
+{
+  "preferred_transport": "web",
+  "allowed_transports": [
+    "manual",
+    "web"
+  ],
+  "api_enabled": false,
+  "browser_preference": "edge",
+  "requested_gemini_web_model": null,
+  "note": "Edge automatic B/C/D is the default. Select an actually visible available mode; API stays disabled unless explicitly enabled by the user.",
+  "web_automation": {
+    "fallback_after_consecutive_failures": 3
+  }
+}

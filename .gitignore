@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+work/
+outputs/
+.env*
+*.journal.lock
+*.execution.json
+.state-*
+.commit-*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

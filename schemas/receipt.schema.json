@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "enum": [
+        "gemini-review/2"
+      ]
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "transport": {
+      "type": "string",
+      "enum": [
+        "api",
+        "web",
+        "manual"
+      ]
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_observed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fresh_context": {
+      "type": "boolean"
+    },
+    "completion_observed": {
+      "type": "boolean"
+    },
+    "response_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "protocol",
+    "task_id",
+    "request_id",
+    "transport",
+    "source_ref",
+    "model_observed",
+    "fresh_context",
+    "completion_observed",
+    "response_sha256"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

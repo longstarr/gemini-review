@@ -1,0 +1,98 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "enum": [
+        "gemini-review/2"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "assumption_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unverified_risks": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_scope": {
+      "type": "string",
+      "enum": [
+        "advisory_only",
+        "bounded_research"
+      ]
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ACCEPT_UNVERIFIED_FOR_THIS_PLAN"
+      ]
+    },
+    "signed_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "approval_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_source": {
+      "type": "string",
+      "enum": [
+        "user_message",
+        "user_signed_document"
+      ]
+    },
+    "artifact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "protocol",
+    "id",
+    "task_id",
+    "plan_sha256",
+    "assumption_ids",
+    "reason",
+    "unverified_risks",
+    "allowed_scope",
+    "decision",
+    "signed_by",
+    "signed_at",
+    "approval_text",
+    "approval_source",
+    "artifact",
+    "artifact_sha256"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
